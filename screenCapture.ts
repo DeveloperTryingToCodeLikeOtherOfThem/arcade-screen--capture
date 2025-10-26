@@ -21,8 +21,9 @@ namespace screenCapture {
    //% weight=99
     //% blockId=screencapturimagedatainscreen160x120 block="capture image data in screen 160 x 120" 
     //% blockAliasFor=screenCapture.captureImageDataInScreen160x120
-    export function __captureImageDataInScreen160x120(): Image {
+    export function __captureImageDataInScreen160x120(): Sprite {
         let img: Image = image.create(screen.width, screen.height) as ScreenImage
+        const sprite = new Sprite(img)
 
         for (let y = 0; y < screen.height; y++)
             for (let x = 0; x < screen.width; x++) {
@@ -31,6 +32,6 @@ namespace screenCapture {
                 scene.centerCameraAt(x, y)
             }
 
-        return img
+        return sprite
     }
 }
