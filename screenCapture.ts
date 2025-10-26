@@ -19,8 +19,8 @@ namespace screenCapture {
     }
 
    //% weight=99
-    //% blockId=screenCaptureCreateCaptureScreenImageSprite block="capture image data in screen 160 x 120" 
-    //% blockAliasFor=screenCapture.captureImageDataInScreen160x120
+    //% blockId=screenCaptureCreateCaptureScreenImageSprite160x120 block="capture image data in screen 160 x 120" 
+    //% blockAliasFor=screenCapture.createCaptureScreenImageSprite
     export function __captureImageDataInScreen160x120(): Sprite {
         let img: Image = image.create(screen.width, screen.height) as ScreenImage
         const sprite = new Sprite(img)
