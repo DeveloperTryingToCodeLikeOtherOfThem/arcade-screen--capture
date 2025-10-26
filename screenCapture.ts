@@ -28,7 +28,6 @@ namespace screenCapture {
                 let color = screen.getPixel(x, y)
                 img.setPixel(x, y, color) // blits the sprites first position and makes the copied one static
             }
-            pause(1000)
             return img
     }
 }
