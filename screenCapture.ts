@@ -7,7 +7,6 @@ namespace screenCapture {
     export function createCaptureScreenImageSprite(): Sprite {
         const sprite: Sprite = new Sprite(getImage())
         game.currentScene().physicsEngine.addSprite(sprite)
-        pause(1000)
         return sprite
     }
   
@@ -17,7 +16,6 @@ namespace screenCapture {
     export function __captureImageDataInScreen160x120(): Sprite {
         const sprite = new Sprite(getImage())
         game.currentScene().physicsEngine.addSprite(sprite)
-        pause(1000)
         return sprite
     }
 
