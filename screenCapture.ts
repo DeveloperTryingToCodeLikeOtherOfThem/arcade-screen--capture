@@ -5,16 +5,9 @@ namespace screenCapture {
     //%  blockSetVariable=myScreenCaptureSprite
     //% weight=100
     export function createCaptureScreenImageSprite(): Sprite {
-        let img: Image = image.create(screen.width, screen.height) as ScreenImage
-
-        for (let y = 0; y < screen.height; y++)
-            for (let x = 0; x < screen.width; x++) {
-                let color = screen.getPixel(x, y)
-                img.setPixel(x, y, color) // blits the sprites first position and makes the copied one static
-            }
-        
         const sprite: Sprite = new Sprite(getImage())
         game.currentScene().physicsEngine.addSprite(sprite)
+        pause(1000)
         return sprite
     }
   
@@ -22,16 +15,9 @@ namespace screenCapture {
     //% blockId=screenCaptureCreateCaptureScreenImageSprite160x120 block="capture image data in screen 160 x 120" 
     //% blockAliasFor=screenCapture.createCaptureScreenImageSprite
     export function __captureImageDataInScreen160x120(): Sprite {
-        let img: Image = image.create(screen.width, screen.height) as ScreenImage
         const sprite = new Sprite(getImage())
         game.currentScene().physicsEngine.addSprite(sprite)
-
-        for (let y = 0; y < screen.height; y++)
-            for (let x = 0; x < screen.width; x++) {
-                let color = screen.getPixel(x, y)
-                img.setPixel(x, y, color) // blits the sprites first position and makes the copied one static
-            }
-
+        pause(1000)
         return sprite
     }
 
@@ -42,7 +28,7 @@ namespace screenCapture {
                 let color = screen.getPixel(x, y)
                 img.setPixel(x, y, color) // blits the sprites first position and makes the copied one static
             }
-
+            pause(1000)
             return img
     }
 }
