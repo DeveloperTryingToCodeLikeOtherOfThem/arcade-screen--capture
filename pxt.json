@@ -1,5 +1,6 @@
 {
     "name": "arcade-screen-capture",
+    "version": "0.0.1",
     "description": "",
     "dependencies": {
         "device": "*"
@@ -8,7 +9,8 @@
         "main.ts",
         "README.md",
         "assets.json",
-        "screenCapture.ts"
+        "screenCapture.ts",
+        "tutorial-info-cache.json"
     ],
     "testFiles": [
         "test.ts"
