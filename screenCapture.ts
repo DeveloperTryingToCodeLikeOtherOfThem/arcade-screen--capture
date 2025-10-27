@@ -29,7 +29,7 @@ namespace screenCapture {
             return img
     }
  
-   //% shim=loops:pause blockId=screenCapturePause block="pause %ms"
+   //% blockId=screenCapturePause block="pause %ms"
    /**
     * Needed this function to pause the screen full control to make it working  
     @param ms means the number of milliseconds ordered for the screen paused for getting the scren captured 
