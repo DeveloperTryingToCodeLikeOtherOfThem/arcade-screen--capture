@@ -37,8 +37,7 @@ namespace screenCapture {
     */
     //% weight=98
     export function pause(ms: number) {
-        loops.pause(ms)
-
         if (ms >= 5000) throw "too long pause"
+        loops.pause(ms)
     }
 }
