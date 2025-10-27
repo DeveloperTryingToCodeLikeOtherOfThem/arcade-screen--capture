@@ -33,7 +33,7 @@ let mySprite = sprites.create(img`
     .....eeeeeee....................
     ................................
     `, SpriteKind.Player)
-pause(0)
+screenCapture.pause(0)
 let myScreenCaptureSprite = screenCapture.createCaptureScreenImageSprite()
 myScreenCaptureSprite.setVelocity(50, 50)
 controller.moveSprite(myScreenCaptureSprite)

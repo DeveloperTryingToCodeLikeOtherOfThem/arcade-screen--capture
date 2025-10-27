@@ -32,8 +32,13 @@ namespace screenCapture {
    //% shim=loops:pause blockId=screenCapturePause block="pause %ms"
    /**
     * Needed this function to pause the screen full control to make it working  
-    @param ms means the number of milliseconds ordered for the screen paused for
+    @param ms means the number of milliseconds ordered for the screen paused for getting the scren captured 
+    needs to pause the screen so the screen delays sometime before exactly gets the empty source instead of the real data
     */
     //% weight=98
-    export function pause(ms: number) {loops.pause(ms)}
+    export function pause(ms: number) {
+        loops.pause(ms)
+
+        if (ms >= 5000) throw "too long pause"
+    }
 }
