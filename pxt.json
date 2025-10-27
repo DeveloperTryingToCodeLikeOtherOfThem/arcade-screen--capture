@@ -1,5 +1,5 @@
 {
-    "name": "arcade-screen--capture",
+    "name": "arcade-screen-capture",
     "description": "",
     "dependencies": {
         "device": "*"

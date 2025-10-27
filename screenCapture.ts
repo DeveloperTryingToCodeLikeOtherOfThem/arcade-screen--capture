@@ -28,4 +28,12 @@ namespace screenCapture {
             }
             return img
     }
+ 
+   //% shim=loops:pause blockId=screenCapturePause block="pause %ms"
+   /**
+    * Needed this function to pause the screen full contro to make it working  
+    @param ms means the number of milliseconds ordered for the screen paused for
+    */
+    //% weight=98
+    export function pause(ms: number = 0) { }
 }
