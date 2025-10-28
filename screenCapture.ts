@@ -21,11 +21,15 @@ namespace screenCapture {
 
     function getImage(): Image {
         let img: Image = image.create(screen.width, screen.height) as ScreenImage
-        for (let y = 0; y < screen.height; y++)
-            for (let x = 0; x < screen.width; x++) {
-                let color = screen.getPixel(x, y)
-                img.setPixel(x, y, color) // blits the sprites first position and makes the copied one static
-            }
+        
+        // updated I did this because this is a new version if sprites are out of screen then updates every frame anything inside the camera and screen configure
+        game.onUpdate(() => {
+            for (let y = 0; y < screen.height; y++)
+                for (let x = 0; x < screen.width; x++) {
+                    let color = screen.getPixel(x, y)
+                    img.setPixel(x, y, color) // blits the sprites first position and makes the copied one static
+                }
+        })
             return img
     }
  
